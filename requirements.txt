@@ -1,8 +1,9 @@
+streamlit
 pandas
 matplotlib
 nltk
-tensorflow
 wordcloud
-streamlit
-joblib
+tensorflow
+scikit-learn
 google-api-python-client
+joblib
