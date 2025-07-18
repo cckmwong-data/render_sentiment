@@ -24,6 +24,7 @@ import html
 from tensorflow.keras.preprocessing.text import tokenizer_from_json
 import json
 from tensorflow.keras.models import load_model
+import tensorflow as tf
 
 from googleapiclient.discovery import build
 
