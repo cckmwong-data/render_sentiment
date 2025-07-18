@@ -3,8 +3,8 @@ FROM python:3.11-slim
 
 # Install system dependencies
 RUN apt-get update && \
-    apt-get install -y gcc build-essential git && \
-    rm -rf /var/lib/apt/lists/*
+apt-get install -y gcc build-essential git wget && \
+rm -rf /var/lib/apt/lists/*
 
 # Set workdir
 WORKDIR /app
