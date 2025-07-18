@@ -49,9 +49,13 @@ nltk.download('wordnet', download_dir=nltk_data_dir)
 
 MODEL_PATH = "sentiment_lstm_model.h5"
 
-@st.cache_resource
 def load_model():
-    return tf.keras.models.load_model(MODEL_PATH)
+    st.write("Checking model file existence...")
+    assert os.path.isfile(MODEL_PATH), f"Model file {MODEL_PATH} not found!"
+    st.write("Model file found, loading now...")
+    model = tf.keras.models.load_model(MODEL_PATH)
+    st.write("Model loaded!")
+    return model
 
 model = load_model()
     
